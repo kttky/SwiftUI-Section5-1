@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var num:Int = 0
     var body: some View {
+        
+        VStack{
         Button(action: {
-            let num = Int.random(in: 0...100)
+            num = Int.random(in: 0...100)
             print(num)
         }){
+            
             Text("Random Button")
-            Text("\(num)")
+           
         
     }
-        
+            Text("\(num)")
+        }
     }
 }
 
